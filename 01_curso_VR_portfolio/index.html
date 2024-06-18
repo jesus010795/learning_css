@@ -4,22 +4,119 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-web/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-web/css/all.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <h1>Test reset</h1>
-    <i class="fa-regular fa-star"></i>
-    <ul>
-      <li>opcion 1</li>
-      <li>opcion 2</li>
-      <li>opcion 3</li>
-    </ul>
+    <section class="layout">
+      <!-- Barra lateral fija  -->
+      <aside class="aside-container">
+        <section class="aside__user-info">
+
+          <div class="user-info__description">
+            <figure class="user-info__image-container">
+              <img
+                class="user-info__img"
+                src="./assets/img/user_default.jpg"
+                alt="Perfil usuario"
+              />
+            </figure>
+            <p class="user-info__name">Jesus cruz</p>
+            <p class="user-info__job">Web Developer</p>
+          </div>
+          <!-- Menu navegacion -->
+          <nav class="aside__menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="index.html" class="item__link">
+                        <i class="fa-solid fa-house item__icon">
+                            <span class="menu__overlay">Home</span>
+                        </i>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="about.html" class="item__link">
+                        <i class="fa-solid fa-user item__icon">
+                            <span class="menu__overlay">A cerca de</span>
+                        </i>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="studies.html" class="item__link">
+                        <i class="fa-solid fa-graduation-cap item__icon">
+                            <span class="menu__overlay">Estudios</span>
+                        </i>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="portfolio.html" class="item__link">
+                        <i class="fa-solid fa-briefcase item__icon">
+                            <span class="menu__overlay">Portafolio</span>
+                        </i>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="blog.html" class="item__link">
+                        <i class="fa-solid fa-book item__icon">
+                            <span class="menu__overlay">Blog</span>
+                        </i>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="contact.html" class="item__link">
+                        <i class="fa-solid fa-envelope item__icon">
+                            <span class="menu__overlay">Contacto</span>
+                        </i>
+                    </a>
+                </li>
+            </ul>
+          </nav>
+          <!-- REDES SOCIALES -->
+          <div class="user-info__social-media">
+            <ul class="social-media__container">
+              <li class="social-media__option">
+                <a href="" class="social-media__link"> 
+                  <i class="social-media__icon fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li class="social-media__option">
+                <a href="" class="social-media__link"> 
+                  <i class="social-media__icon fa-brands fa-linkedin"></i>
+                </a>
+              </li>
+              <li class="social-media__option">
+                <a href="" class="social-media__link"> 
+                  <i class="social-media__icon fa-brands fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- BOTON CV -->
+          <div class="user-info__cv">
+            <button class="btn cv__button"></button>
+          </div>
+          <!-- FOOTER -->
+           <footer class="user-info__footer">
+            &copy; 2024 JCD
+           </footer>
+        </section>
+      </aside>
+
+      <main class="layout__content">
+        <section class="content__page">
+          <h1 class="page__name">Jesus Cruz Dominguez</h1>
+          <h2 class="page__job">Desarrollador Backend</h2>
+        </section>
+      </main>
+    </section>
   </body>
 </html>

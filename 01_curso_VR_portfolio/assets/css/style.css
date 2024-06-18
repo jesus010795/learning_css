@@ -1,15 +1,61 @@
+/* VARIABLES */
+
+:root {
+    --poppins-font: "Poppins", sans-serif;
+    --primary-blue: #13B4E0;
+    --secondary-gray: #B5B6B7;
+    --white-background: #F2F7F9;
+    --text-color: #555;
+    --title-color: #222222;
+    
+}
+
 /* Css Reset june 2024 */
 
-* { margin: 0; padding: 0; }
+* { 
+    margin: 0; 
+    padding: 0; 
+}
 *, *::before, *::after { box-sizing: border-box; }
 
-body { min-height: 100dvh; }
-input, button, textarea, select { font: inherit; }
+html{
+    font-size: 62.5%;
+}
+
+body { 
+    min-height: 100dvh;
+    font-family: var(--poppins-font);
+    font-weight: normal;
+    text-rendering: optimizeSpeed;
+    scroll-behavior: smooth;
+}
+form, input, button, textarea, select { 
+    font-family: inherit;
+    display: block; 
+}
 
 p { text-wrap: pretty; }
-h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
+h1, h2, h3, h4, h5, h6 { 
+    font-size: 1rem;
+    text-wrap: balance; 
+}
 
-img, video, svg { height: auto; max-width: 100%; }
+figure, picture, img, video, svg { 
+    display: block;
+    height: auto; 
+    max-width: 100%; 
+}
+
+ol, ul {
+	list-style: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+  }
 
 @media (prefers-reduced-motion: reduce)  {
  *, *::before, *::after { 
@@ -21,13 +67,12 @@ img, video, svg { height: auto; max-width: 100%; }
  }
 }
 
-/* VARIABLES */
+/* Estilos generales */
 
-:root {
-    --poppins-font: "Poppins", sans-serif;
-}
 
-h1{
-    font-family: var(--poppins-font);
-    font-weight: normal;
-}
+
+
+/* Estructura principal */
+
+
+
