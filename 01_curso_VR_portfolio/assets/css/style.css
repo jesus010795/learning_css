@@ -5,9 +5,10 @@
     --primary-blue: #13B4E0;
     --secondary-gray: #B5B6B7;
     --white-background: #F2F7F9;
+    /* --gray-background: #f2f2f2; */
     --text-color: #555;
     --title-color: #222222;
-    
+
 }
 
 /* Css Reset june 2024 */
@@ -22,13 +23,7 @@ html{
     font-size: 62.5%;
 }
 
-body { 
-    min-height: 100dvh;
-    font-family: var(--poppins-font);
-    font-weight: normal;
-    text-rendering: optimizeSpeed;
-    scroll-behavior: smooth;
-}
+
 form, input, button, textarea, select { 
     font-family: inherit;
     display: block; 
@@ -38,6 +33,9 @@ p { text-wrap: pretty; }
 h1, h2, h3, h4, h5, h6 { 
     font-size: 1rem;
     text-wrap: balance; 
+
+    /* Estilos generales */
+    color: var(--text-color);
 }
 
 figure, picture, img, video, svg { 
@@ -69,10 +67,93 @@ a {
 
 /* Estilos generales */
 
-
+body { 
+    width: 100%;
+    min-height: 100dvh;
+    font-family: var(--poppins-font);
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-rendering: optimizeSpeed;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    background-color: var(--white-background);
+    background-image: url("../img/fondo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -95px -70px;
+    /* background-color: black; */
+}
 
 
 /* Estructura principal */
 
+.layout{
+    position: relative;
+    width: 75%;
+    height: 80vh;
+    margin: 10vh auto;
+    display: flex;
+    box-shadow: 0 0 100px -5px rgba(0,0,0, .25);
+    border-radius: 4rem;
+    overflow: hidden;
+    /* border: solid 1px red; */
+}
 
+.aside-container {
+    width: 30%;
+    /* display: flex;
+    flex-direction: column; */
+    /* max-width: 390px; */
+    background-color: var(--primary-blue);
+    /* border: solid 1px black; */
+}
 
+.aside__user-info{
+    text-align: center;
+    color: white;
+}
+
+.user-info__image-container{
+    margin: 7rem auto;
+    width: 180px;
+    height: 180px;
+}
+
+.user-info__img{
+    object-fit: cover; 
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 100%;
+    height: 100%;
+}
+
+.user-info__image-container::after{
+    /* content: "Hola"; */
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: -webkit-repeating-radial-gradient(center, center, #fff, #fff 2px, transparent 0px, transparent 100%);
+    /* background: (circle at 100%, #333, #333 10px, #eee 10px, #eee 20px); */
+    background-size: 0.6rem 0.6rem;
+    
+}
+
+.menu__overlay{
+    display: none;
+}
+.user-info__social-media{
+
+}
+
+.social-media__container{
+    margin: 0 auto;
+    width: fit-content;
+    display: flex;
+    gap: 10px;
+}
+
+.social-media__icon{
+    font-size: 1.5rem;
+}
