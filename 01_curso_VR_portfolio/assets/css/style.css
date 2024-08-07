@@ -15,9 +15,10 @@
 
 * { 
     margin: 0; 
-    padding: 0; 
+    padding: 0;
+    box-sizing: border-box; 
 }
-*, *::before, *::after { box-sizing: border-box; }
+
 
 html{
     font-size: 62.5%;
@@ -55,15 +56,15 @@ a {
     font-size: inherit;
   }
 
-@media (prefers-reduced-motion: reduce)  {
+/* @media (prefers-reduced-motion: reduce)  {
  *, *::before, *::after { 
  animation-duration: 0.01ms !important; 
  animation-iteration-count: 1 !important; 
  transition-duration: 0.01ms !important; 
  scroll-behavior: auto !important;
  transition: none;
- }
-}
+ } */
+/* } */
 
 /* Estilos generales */
 
@@ -114,35 +115,49 @@ body {
 }
 
 .user-info__image-container{
-    margin: 7rem auto;
-    width: 180px;
-    height: 180px;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    margin: 7.5rem auto 2rem;
+    width: 19rem;
+    height: 19rem;
 }
 
 .user-info__img{
+    width: 100%;
+    height: 100%;
     object-fit: cover; 
     border-radius: 50%;
     border: 2px solid white;
-    width: 100%;
-    height: 100%;
 }
 
 .user-info__image-container::after{
-    /* content: "Hola"; */
+    content: "";
     position: absolute;
-    top: 10%;
+    top: 3%;
+    right: -5%;
     width: 100%;
     height: 100%;
-    z-index: 1;
-    background-image: -webkit-repeating-radial-gradient(center, center, #fff, #fff 2px, transparent 0px, transparent 100%);
-    /* background: (circle at 100%, #333, #333 10px, #eee 10px, #eee 20px); */
+    z-index: -1;
+    background-image: repeating-radial-gradient(#fff, #fff 1px, transparent 0px, transparent 100%);
+    border-radius: 50%;
     background-size: 0.6rem 0.6rem;
-    
+    opacity: 0.5;
+}
+
+.user-info__name{
+    font-size: 4rem;
+}
+.user-info__job{
+    margin: 1.5rem 0;
+    font-size: 2rem;
 }
 
 .menu__overlay{
     display: none;
 }
+
+
 .user-info__social-media{
 
 }
@@ -155,5 +170,16 @@ body {
 }
 
 .social-media__icon{
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+}
+
+.aside__menu{
+    display: none
+}
+
+/* BOTON */
+.user-info__cv{
+    
+    display: inline-block;
+    border-radius: 1.5rem;
 }
